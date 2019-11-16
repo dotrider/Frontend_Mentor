@@ -1,0 +1,128 @@
+/* mobile-first workflow @ 375px */
+body {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 30px 25px;
+  margin: 0;
+}
+
+h1, h3, p {
+  color: hsl(229, 6%, 66%);
+  font-weight: 200;
+}
+
+h2 {
+    text-align: left;
+}
+
+p {
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-title {
+  font-size: 0.80rem;
+}
+
+.sub-title {
+  font-size: 0.85rem;
+}
+
+.title-bold , h2 {
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+}
+
+/* Main container that contains all four boxes */
+.container {
+  display: grid;
+  grid-template-columns: 325px;
+  justify-content: center;
+  margin: 60px 50px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+/* Boxes dimentions with styles */
+.box {
+  height: 225px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px gray;
+  padding: 0 25px;
+}
+
+/* Top border colors for all four boxes */
+.super {
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.builder {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.karma {
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.cal {
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+.icons {
+  float: right;
+}
+
+/* Footer */
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/* As screen size increases the following css will apply at 768px for iPad */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 325px);
+  }
+
+  .main-title {
+    font-size: 0.9375rem;
+  }
+
+  .sub-title {
+    font-size: 0.875rem;
+    padding: 0 10%;
+  }
+}
+
+/* As screen size increases the following css will apply at 1140px for desktops */
+@media (min-width: 1140px) {
+  .container {
+    grid-template-columns: repeat(3, 325px);
+  }
+
+  .sub-title {
+    padding: 0 25%;
+  }
+
+  .super {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: center;
+  }
+
+  .cal {
+    grid-column: 3;
+    grid-row: 1/3;
+    align-self: center;
+  }
+}
+/* As screen size increases the following css will apply at 1440px for desktops */
+@media (min-width:1440px) {
+  .sub-title {
+    padding: 0 30%;
+  }
+}
