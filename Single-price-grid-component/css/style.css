@@ -1,0 +1,116 @@
+/*Mobile-first*/
+body {
+  font-size: 0.625rem;
+  font-family: 'Karla', sans-serif;
+  background-color: hsl(204, 43%, 93%);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 0.80rem;
+  line-height: 1.5rem;
+}
+
+.container {
+  display: grid;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 45px 25px 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/*Starts style for first section of container*/
+.heading {
+  background-color: #ffff;
+  color: hsl(179, 62%, 43%);
+  padding: 15px 25px;
+}
+
+.subtitle {
+  color: hsl(71, 73%, 54%);
+}
+
+.intropara {
+  color: hsl(218, 22%, 67%);
+  font-weight: 400;
+}
+
+.grayfont {
+  color: hsl(204, 40%, 89%);
+}
+
+/*Style for middle section of container*/
+.midsec {
+  background-color: hsl(179, 62%, 43%);
+  padding: 10px 25px;
+}
+
+.price {
+  font-size: 2rem;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/*Button style*/
+.btn {
+  box-shadow: inset 0px 1px 5px 0px #a4e271;
+  background-color: hsl(71, 73%, 54%);
+  border-radius: 7px;
+  border: 1px solid #74b807;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 90px;
+  width: 100%;
+}
+
+/*Style for last section of container*/
+.lastsec {
+  background-color: hsl(179, 62%, 45%);
+  padding: 10px 105px 10px 25px;
+}
+
+/*Footer*/
+.attribution {
+  font-size: 0.625rem;
+  color: hsl(218, 22%, 67%);
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*Changes page layout for ipad and desktop screens*/
+@media (min-width:768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    grid-template-columns: 325px 325px;
+    width: 650px;
+    margin: 10% auto 20px;
+  }
+
+  /*Arranges order and layout of each section in container*/
+  .heading {
+    grid-column: 1/3;
+  }
+
+  .midsec {
+    grid-column: 1;
+  }
+
+  .lastsec {
+    grid-column: 2;
+  }
+}
